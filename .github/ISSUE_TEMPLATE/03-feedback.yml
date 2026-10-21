@@ -5,7 +5,7 @@ labels: ["feedback"]
 projects: ["myproject"]
 assignees:
   - me
-type: bug
+type: feedback
 body:
   - type: markdown
     attributes:
