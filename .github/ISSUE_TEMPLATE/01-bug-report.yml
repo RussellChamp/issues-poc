@@ -20,6 +20,7 @@ body:
       label: Game Build
       description: What version of the game were you running?
       options:
+        - latest
         - "0.123"
         - "0.456"
         - "0.789"

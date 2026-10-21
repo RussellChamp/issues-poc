@@ -21,6 +21,7 @@ body:
       description: What's the current version of the game were are playing? (This is
         to help us track whether we've already implemented a suggested feature.)
       options:
+        - latest
         - "0.123"
         - "0.456"
         - "0.789"
