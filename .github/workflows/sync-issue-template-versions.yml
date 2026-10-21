@@ -1,0 +1,41 @@
+name: Sync issue template versions
+
+on:
+  push:
+    paths:
+      - .github/issue-data/versions.yml
+      - .github/ISSUE_TEMPLATE/*.yml
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install YAML parser
+        run: npm install yaml
+
+      - name: Sync dropdown values
+        run: node scripts/sync_issue_template_versions.mjs
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/ISSUE_TEMPLATE/*.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync issue template versions"
+            git push
+          fi
