@@ -5,7 +5,7 @@ labels: ["feature", "triage"]
 projects: ["myproject"]
 assignees:
   - me
-type: bug
+type: feature
 body:
   - type: markdown
     attributes:
