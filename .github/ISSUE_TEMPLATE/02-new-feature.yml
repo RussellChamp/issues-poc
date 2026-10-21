@@ -1,8 +1,11 @@
 name: 💭 New Feature
 description: Tell us about an idea you have for a new feature.
 title: "[Feature]: "
-labels: ["feature", "triage"]
-projects: ["myproject"]
+labels:
+  - feature
+  - triage
+projects:
+  - myproject
 assignees:
   - me
 type: feature
@@ -15,11 +18,12 @@ body:
     id: version
     attributes:
       label: Game Build
-      description: What's the current version of the game were are playing? (This is to help us track whether we've already implemented a suggested feature.)
+      description: What's the current version of the game were are playing? (This is
+        to help us track whether we've already implemented a suggested feature.)
       options:
-        - 0.123
-        - 0.456
-        - 0.789
+        - "0.123"
+        - "0.456"
+        - "0.789"
       default: 0
     validations:
       required: true
@@ -41,14 +45,15 @@ body:
       label: What is your suggested feature?
       description: How awesome is it?
       placeholder: Tell us what you want to see!
-      value: "My really cool idea!"
+      value: My really cool idea!
     validations:
       required: true
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      description: By submitting this issue, you agree to follow our [Code of
+        Conduct](https://example.com).
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
@@ -56,6 +61,7 @@ body:
     id: crayon-drawings
     attributes:
       label: Upload pictures
-      description: Add drawings of your feature idea (crayon only) to help explain what you would like to see
+      description: Add drawings of your feature idea (crayon only) to help explain
+        what you would like to see
     validations:
       required: false
