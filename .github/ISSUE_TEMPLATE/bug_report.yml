@@ -1,0 +1,67 @@
+name: Bug Report
+description: Report a bug while playing the game
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["myproject"]
+assignees:
+  - me
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+  - type: dropdown
+    id: version
+    attributes:
+      label: Game Build
+      description: What version of the game were you running?
+      options:
+        - 0.123
+        - 0.456
+        - 0.789
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: flavor
+    attributes:
+      label: Flavor
+      description: Which flavor were you using?
+      options:
+        - Foo
+        - Bar
+        - Baz
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Upload screenshots
+      description: If applicable, add screenshots to help explain your problem.
+    validations:
+      required: false
