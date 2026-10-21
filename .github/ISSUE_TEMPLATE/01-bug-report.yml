@@ -1,4 +1,4 @@
-name: Bug Report
+name: 🐛 Bug Report
 description: Report a bug while playing the game
 title: "[Bug]: "
 labels: ["bug", "triage"]
