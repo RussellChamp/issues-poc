@@ -1,0 +1,48 @@
+name: Feedback
+description: Give us general feedback regarding the game
+title: "[Feedback]: "
+labels: ["feedback"]
+projects: ["myproject"]
+assignees:
+  - me
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for dropping us a note!
+  - type: dropdown
+    id: version
+    attributes:
+      label: Game Build
+      description: What version of the game were you running?
+      options:
+        - 0.123
+        - 0.456
+        - 0.789
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: What would you like to tell us?
+      description: Also how awesome we are!
+      value: "Here is a feeback!"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Upload screenshots
+      description: Add a picture of your pet. Like a dog or cat or child or goldfish.
+    validations:
+      required: false
